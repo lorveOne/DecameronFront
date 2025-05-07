@@ -72,7 +72,7 @@ export const ListaHabitaciones = () => {
   }
 
   return (
-    <div>
+    <div >
       <h2>Listado de Habitaciones del Hotel <br />
       
            Nit {hotel?.nit +" -- " + hotel?.nombre}

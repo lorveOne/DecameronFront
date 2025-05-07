@@ -2,6 +2,9 @@ form {
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 input, select {

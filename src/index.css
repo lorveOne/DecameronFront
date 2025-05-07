@@ -1,85 +1,106 @@
-html,body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  background-color :#f5f5f5 ;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
+/* Estilos base */
 .main-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: #ffff;
-  height: 100vh;
-  margin-right: 15px;
-  overflow-y: scroll;
-  text-align: center;
-  width: 250px;
-
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  position: relative;
 }
-nav ul {
-  align-items: center;
+
+.nav-header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav li {
+.nav-header img {
+  height: 40px;
+}
+
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-menu {
   list-style: none;
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: all 0.3s ease;
 }
 
-nav li a {
-  color: black;
-  font-size: 1.2rem;
-  text-decoration: none;
+.nav-menu li {
+  padding: 0.5rem 0;
 }
 
-.nav-active {
-  color: black;
-  transition: all 0.3s ease-out;
-  border-radius: 10px;
-  padding: 12px 16px;
-  background-color: #f5f5f5;
-  width: 100%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* sombra suave */
+.nav-menu a {
+  color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
   display: block;
+  transition: all 0.3s ease;
 }
 
-.nav-active:hover {
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* sombra más profunda al pasar el mouse */
-  text-decoration: none;
-  transform: translateY(-2px); /* efecto de elevación */
+.nav-menu a:hover, 
+.nav-active {
+  color: #3498db;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
-nav li a:hover {
-  color: #000;
-  text-decoration: none;
-}
-nav li a:active {
-  color: #000;
-  text-decoration: none;
-}
-nav li a:focus {
-  color: #000;
-  text-decoration: none;
-}
+
+/* Estilos para móviles */
 @media (max-width: 768px) {
-  .main-layout {
-    flex-direction: column; /* Apila el nav arriba */
+  .nav-menu {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    z-index: 1000;
+  }
+  
+  .nav-menu.open {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+  
+  .nav-menu li {
+    padding: 0;
+  }
+  
+  .nav-menu a {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 769px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-menu {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .hamburger-btn {
+    display: none;
   }
 }
