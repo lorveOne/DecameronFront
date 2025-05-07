@@ -1,0 +1,65 @@
+[
+    {
+        "type": "number",
+        "label": "Nit",
+        "name": "nit",
+        "placeholder": "Enter your NIT number",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value":  4
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "label": "Nombre Hotel",
+        "name": "nombre",
+        "placeholder": "Escribe el nombre del hotel",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value":  4
+            }
+        ]
+    }, 
+    {
+        "type": "text",
+        "label": "ciudad",
+        "name": "ciudad",
+        "placeholder": "Escribe nombre Ciudad",
+        "value": ""
+    },
+    {
+        "type": "text",
+        "label": "Direccion",
+        "name": "direccion",
+        "placeholder": "Escribe direccion",
+        "value": ""
+    },
+    {
+        "type": "number",
+        "label": "Numero de habitaciones",
+        "name": "numHab",
+        "placeholder": "Escribe numero de habitaciones",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value":  1
+            }
+        ]
+    }
+   
+]

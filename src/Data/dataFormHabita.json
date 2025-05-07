@@ -1,0 +1,52 @@
+[
+    {
+        "type": "number",
+        "label": "Id Hotel",
+        "name": "idHotel",
+        "placeholder": "ID del hotel",
+        "value": ""
+    },
+    {
+        "type": "text",
+        "label": "Numero Habitaciones",
+        "name": "numHabi",
+        "placeholder": "Escribe numero de habitaciones",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value":  1
+            }
+        ]
+    }, 
+    {
+        "type": "select",
+        "label": "Tipo Habitacion",
+        "name": "typeHabitacion",
+        "placeholder": "Selecciona el tipo de habitacion",
+        "options": [
+            { "label": "ESTANDAR", "value": "1" },
+            { "label": "JUNIOR", "value": "2" },
+            { "label": "SUITE", "value": "3" }
+        ],
+        "value": ""
+    },
+    {
+        "type": "select",
+        "label": "type acomodation",
+        "name": "typeAcomodation",
+        "placeholder": "Enter your acomodation",
+        "options": [
+            { "label": "SENCILLA", "value": "1" },
+            { "label": "TRIPLE", "value": "2" },
+            { "label": "DOBLE", "value": "3" },
+            { "label": "CUADRUPLE", "value": "4" }
+        ],
+        "value": ""
+    } 
+    
+   
+]
