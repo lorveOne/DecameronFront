@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Hotel } from '../types/Hotel';
 import { ApiResponse } from '../types/ApiResponse'; 
 
-const API_URL = 'http://localhost:8000/api/hoteles';
+const API_URL = 'https://backenddecameron.onrender.com/api/hoteles';
 
 export const hotelService = {
   getAll: async (): Promise<Hotel[]> => {

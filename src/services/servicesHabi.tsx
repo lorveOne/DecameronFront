@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Habitacion } from '../types/Habitacion';
 import { ApiResponse } from '../types/ApiResponse'; 
 
-const API_URL = 'http://localhost:8000/api/habitaciones';
+const API_URL = 'https://backenddecameron.onrender.com/api/habitaciones';
 
 export const HabitaService = {
   getAll: async (): Promise<Habitacion[]> => {
